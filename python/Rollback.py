@@ -4,11 +4,14 @@ import random
 #---==CLASSES==---
 class Player:
     """The base player class."""
-    def __init__(self, number = 0):
-        self.number = number
+    def __init__(self, player_number = 0):
+        self.number = player_number
 
 class Bot(Player):
     """A non-playable player with automated functionality."""
+    def __init__(self, player_number = 0):
+        super().__init__(player_number)
+
     def get_input(self):
         """Randomly generates an input"""
         pass
