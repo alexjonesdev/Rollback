@@ -4,8 +4,8 @@ import random
 #---==CLASSES==---
 class Player:
     """The base player class."""
-    def __init__(self, player_number = 0):
-        self.number = player_number
+    def __init__(self, health = 1000):
+        self.health = health
 
 class Bot(Player):
     """A non-playable player with automated functionality."""
@@ -13,8 +13,13 @@ class Bot(Player):
         super().__init__(player_number)
 
     def get_input(self):
-        """Randomly generates an input"""
-        pass
+        """Randomly generates an input."""
+        random.choice(['a','b','x','y'])
+
+class State():
+    """Holds the current state of the game."""
+    def __init__(self, players = []):
+        self.players = players
 
 #---==MAIN LOGIC==---
 
