@@ -98,7 +98,7 @@ max_frames = 20
 players = [Bot(True, 1000, 0, 0), Bot(False, 1000, 100, 0)]
 frames = []
 
-while current_frame <= max_frames:
+while Game.running == True:#current_frame <= max_frames:
     start = time.time()
     print('Player 1:', players[0].get_input(), 'Player 2:', players[1].get_input())
     # update()
